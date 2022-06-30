@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(#ffffff, #00040D);
+    height: 100vh;
+    width: 100vw;
+}
+
+#formsub {
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 60%;
+    background: rgba(0, 0, 0, 0.2);
+    transform: translateX(50%) translateY(35%);
+    border: black solid 4px;
+    border-radius: 35px;
+}
+
+#formsub>label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #00040D;
+}
+
+#FirstName,
+#Surname,
+#IDNo {
+    border-radius: 5px;
+    height: 25px;
+}
+
+#DOB {
+    border-radius: 5px;
+    height: 25px;
+    width: 22%;
+}
+
+#btnPost {
+    border-radius: 5px;
+    height: 25px;
+    width: 22%;
+}
+
+#btnCancel {
+    align-items: center;
+    text-align: center;
+    height: 28px;
+    width: 11%;
+    transform: translateX(405%) translateY(250%);
+    border: black solid 2px;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #ffffff;
+}

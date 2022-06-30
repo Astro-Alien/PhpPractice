@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(#ffffff, #00040D);
+    height: 100vh;
+    width: 100vw;
+}
+
+#forms {
+    color: #ffffff;
+    text-align: center;
+    transform: translateX(50%)translateY(50%);
+    height: 50%;
+    width: 50%;
+}
+
+#forms #f1 {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 70%;
+    border: black solid 4px;
+    border-radius: 35px;
+}
+
+#forms #f2 {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 40%;
+    border: black solid 4px;
+    border-radius: 35px;
+}
+
+#forms>#f1>label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #00040D;
+}
+
+#lbl {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 18px;
+    color: #00040D;
+}
+
+#Generate {
+    border-radius: 5px;
+    height: 25px;
+}
+
+#inFile {
+    border-radius: 5px;
+    height: 25px;
+}
+
+#btnGenerate,
+#btnsub {
+    border-radius: 5px;
+    height: 25px;
+    width: 22%;
+}

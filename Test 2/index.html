@@ -5,35 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
     <title>Test 1</title>
 </head>
 
 <body>
-    <h1>Test 2 CSV file</h1>
 
-    <form action="generate.php" method="get">
-        <!--First Name-->
-        <h2>Enter the number of records you wish to generate</h2>
-        <label for="Generate">Enter a Number:</label><br>
-        <input type="text" id="Generate" name="Generate" value="" required><br><br>
-        <!--Buttons-->
-        <button type="submit" id="btnGenerate">Generate</button>
-    </form>
-
-    <form method="post" enctype="multipart/form-data" action="saveToDB.php">
-        <div>
-            <label>Select CSV File:</label>
-            <input type="file" name="file" />
-            <br />
-            <input type="submit" name="submit" value="Import" class="btn btn-info" />
-        </div>
-    </form>
-    <!-- <form method="POST" action="saveToDB.php" enctype="multipart/form-data">
-
-        <h1>Upload CSV File</h1>
-        <input type="file" name="file">
-        <input type="submit" name="submit" value="Submit" id="btnSubmit">
-    </form> -->
+    <div id="forms">
+        <form action="generate.php" method="get" id="f1">
+            <h1>Test 2 CSV file</h1><br/>
+            <!--First Name-->
+            <h2>Enter the number of records you wish to generate</h2><br/>
+            <label for="Generate">Enter a Number here:</label><br>
+            <input type="text" id="Generate" name="Generate" value="" required><br><br>
+            <!--Buttons-->
+            <button type="submit" id="btnGenerate">Generate</button>
+        </form>
+        <br/>
+        <br/>
+        <form id="f2" method="post" enctype="multipart/form-data" action="saveToDB.php">
+            <div>
+                <br>
+                <label id="lbl">Select CSV File:</label><br/><br/>
+                <input type="file" name="file" /><br/>
+                <br />
+                <input type="submit" name="submit" value="Import" id="btnsub" />
+            </div>
+        </form>
+    </div>
 
 </body>
 

@@ -6,6 +6,7 @@
    //------------------------------------------------------------------------------------input validation
    function isEmpty($variable){
         if(empty($variable) || !is_numeric($variable) || $variable <= 0){
+            echo('<input action="action" type="button" value="Back" onclick="window.history.go(-1); return false;" />');
             $emptyString ="<script type='text/javascript'>alert('Please enter a valid number that is greater than 0:');</script>";
             die($emptyString);
                 
@@ -47,7 +48,7 @@
     //-----------------------------------------------------------------------------------create CSV File function
     function createCSV($numVariations){
         
-        $file_path = fopen('output\\output.csv', 'a');
+        $file_path = fopen('output\\output.csv', 'w');
 
         $y = 0;
 

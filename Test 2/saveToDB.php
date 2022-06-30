@@ -12,6 +12,7 @@
     $connection = mysqli_connect($databaseHost, $username, $password, $databaseName);
 
     if(mysqli_connect_errno()){
+        echo('<input action="action" type="button" value="Back" onclick="window.history.go(-1); return false;" />');
         die("The connection to the database has failed due to: ". mysqli_connect_error());
     }
 
@@ -26,11 +27,13 @@
         PRIMARY KEY (Id)
     )";
     if (mysqli_query($connection, $sqlStatement)) {
+        echo('<input action="action" type="button" value="Back" onclick="window.history.go(-1); return false;" />');
         $CompletedString ="<script type='text/javascript'>alert('Table csv_import was created successfully');</script>";
         echo($CompletedString);
     
 
     } else {
+        echo('<input action="action" type="button" value="Back" onclick="window.history.go(-1); return false;" />');
         $failedString ="<script type='text/javascript'>alert('Error creating table csv_import: ');</script>";
         echo($failedString);
     }
@@ -59,6 +62,6 @@
             }
         }
     }
-   
+    
     mysqli_close($connection);
 ?>

@@ -89,12 +89,13 @@
         //-----------------------------------------------------------------------------------check if id already exist in the database before executing save
         $existQuery =  mysqli_query($connection,"SELECT * FROM `register` WHERE id = '$id'");
         if(mysqli_num_rows($existQuery) > 0){
+            echo('<input action="action" type="button" value="Back" onclick="window.history.go(-1); return false;" />');
             $alert ="<script>alert('A record with the ID: {$id} already exist in the database.');</script>";
-
             echo($alert);
 
         }
         else{
+            echo('<input action="action" type="button" value="Back" onclick="window.history.go(-1); return false;" />');
             mysqli_execute($statement);
             $savedAlert ="<script>alert('The record has been saved successfully.');</script>";
             echo($savedAlert);
