@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Test 1</title>
+</head>
+
+<body>
+    <h1>Test 1 Save Data To A Database</h1>
+
+    <form action="save.php" method="post">
+        <!--First Name-->
+        <label for="FirstName">Enter Name:</label><br>
+        <input type="text" id="FirstName" name="FirstName" value="" required><br><br>
+
+        <!--Last Name-->
+        <label for="Surname">Enter Surname:</label><br>
+        <input type="text" id="Surname" name="Surname" required><br><br>
+
+        <!--ID Number-->
+        <label for="IDNo">Enter ID No:</label><br>
+        <input type="text" id="IDNo" name="IDNo" required><br><br>
+
+        <!--Date of Birth-->
+        <!--Later add a drop down calender the user can select from maybe.-->
+        <label for="DOB">Enter Date of Birth:</label><br>
+        <input type="date" placeholder="dd/mm/YYYY" min="1920/01/01" max="2050/12/31" value="" id="DOB" name="DOB" required><br><br>
+
+        <!--Buttons-->
+        <button type="submit" id="btnPost">Post</button>
+
+
+    </form>
+    <br/>
+    <input type="button" onclick="document.getElementById('FirstName').value = '';
+    document.getElementById('Surname').value = '';
+    document.getElementById('IDNo').value = '';
+    document.getElementById('DOB').value = '';
+    " value='Cancel' id="btnCancel">
+
+
+</body>
+
+</html>
