@@ -47,7 +47,7 @@
     //-----------------------------------------------------------------------------------create CSV File function
     function createCSV($numVariations){
         
-        $fp = fopen('output\\output.csv', 'a');
+        $file_path = fopen('output\\output.csv', 'a');
 
         $y = 0;
 
@@ -55,7 +55,7 @@
             ['Id','Name','Surname','Initial','Age','Date_Of_Birth']
         );
         foreach($header as $fields){
-            fputcsv($fp, $fields);
+            fputcsv($file_path, $fields);
         }
         for($i = 0; $i < $numVariations; $i++){
             $y++;
@@ -63,23 +63,16 @@
             $array[0]["Id"] = $y;
 
             foreach($array as $field){
-                fputcsv($fp, $field);
+                fputcsv($file_path, $field);
             }
             
         }
         echo('<input action="action" type="button" value="Back" onclick="window.history.go(-1); return false;" />');
         $CompletedString ="<script type='text/javascript'>alert('CSV File Successfully Created: Can be found in output folder.');</script>";
         echo($CompletedString);
-        fclose($fp);
+        fclose($file_path);
     }
     
     createCSV($number);
-
-    //-----------------------------------------------------------------------------------database code
-    
- 
-  
-    
-    
 
  ?>

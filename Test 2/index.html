@@ -19,11 +19,21 @@
         <!--Buttons-->
         <button type="submit" id="btnGenerate">Generate</button>
     </form>
-    <form name="" method="" action="">
+
+    <form method="post" enctype="multipart/form-data" action="saveToDB.php">
+        <div>
+            <label>Select CSV File:</label>
+            <input type="file" name="file" />
+            <br />
+            <input type="submit" name="submit" value="Import" class="btn btn-info" />
+        </div>
+    </form>
+    <!-- <form method="POST" action="saveToDB.php" enctype="multipart/form-data">
 
         <h1>Upload CSV File</h1>
-        <input type="file" accept=".csv">
-        <button type="submit">Submit</button> </form>
+        <input type="file" name="file">
+        <input type="submit" name="submit" value="Submit" id="btnSubmit">
+    </form> -->
 
 </body>
 
