@@ -1,10 +1,18 @@
 
 <!--PHP Code-->
 <?php
-    $number = $_POST["Generate"];
-
+    $number = $_GET["Generate"];
+    isEmpty($number);
+   //------------------------------------------------------------------------------------input validation
+   function isEmpty($variable){
+        if(empty($variable) || !is_numeric($variable) || $variable <= 0){
+            $emptyString ="<script type='text/javascript'>alert('Please enter a valid number that is greater than 0:');</script>";
+            die($emptyString);
+                
+        }
+    }
     
-
+    //-----------------------------------------------------------------------------------generate random name/surname/age/date_of_birth
     function Generate(){
        //Arrays
         $Names = array("Asher","Jeremy","Hezekiahx","Grant","Kirsten","Brennen",
@@ -27,6 +35,7 @@
         $random = rand(strtotime("70 years ago"),strtotime("18 years ago"));
         $date_of_birth = date("d/m/Y",$random);
         $x = 0;
+
         $data = array(
             ["Id"=> $x,"name" => $first_name,"surname" => $last_name,"initials" => $initials, "age" => $age,"dob" => $date_of_birth] 
         );
@@ -35,14 +44,13 @@
     }   
         
 
-    // print_r(Generate());
-    
-    
-
+    //-----------------------------------------------------------------------------------create CSV File function
     function createCSV($numVariations){
         
         $fp = fopen('output\\output.csv', 'a');
+
         $y = 0;
+
         $header =  array(
             ['Id','Name','Surname','Initial','Age','Date_Of_Birth']
         );
@@ -59,12 +67,16 @@
             }
             
         }
-
+        echo('<input action="action" type="button" value="Back" onclick="window.history.go(-1); return false;" />');
+        $CompletedString ="<script type='text/javascript'>alert('CSV File Successfully Created: Can be found in output folder.');</script>";
+        echo($CompletedString);
         fclose($fp);
     }
     
-    createCSV(100);
+    createCSV($number);
 
+    //-----------------------------------------------------------------------------------database code
+    
  
   
     

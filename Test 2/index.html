@@ -11,16 +11,19 @@
 <body>
     <h1>Test 2 CSV file</h1>
 
-    <form action="generate.php" method="post">
+    <form action="generate.php" method="get">
         <!--First Name-->
-        <label for="Generate">Enter The Number of Records You Want To Generate:</label><br>
+        <h2>Enter the number of records you wish to generate</h2>
+        <label for="Generate">Enter a Number:</label><br>
         <input type="text" id="Generate" name="Generate" value="" required><br><br>
         <!--Buttons-->
-        <button type="submit" id="btnPost">Post</button>
-
-
+        <button type="submit" id="btnGenerate">Generate</button>
     </form>
+    <form name="" method="" action="">
 
+        <h1>Upload CSV File</h1>
+        <input type="file" accept=".csv">
+        <button type="submit">Submit</button> </form>
 
 </body>
 
