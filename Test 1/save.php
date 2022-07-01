@@ -20,6 +20,7 @@
         //-----------------------------------------------------------------------------------validation for empty fields
         function isEmpty($variable, $nameOfVariable){
             if(empty($variable)){
+                
                 $emptyString ="<script type='text/javascript'>alert('The field {$nameOfVariable} cannot be empty');</script>";
                 die($emptyString);
                     
@@ -46,12 +47,14 @@
         function stringValidation($stringVar, $stmt){
 
             if(is_numeric($stringVar)){
+                echo('<input action="action" type="button" value="Back" onclick="window.history.go(-1); return false;" />');
                 $invalidString ="<script type='text/javascript'>alert('The field {$stmt} must contain a string and cannot contain a numeric value.');</script>";
                 die($invalidString);
                 
             }
             if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $stringVar))
                 {
+                    echo('<input action="action" type="button" value="Back" onclick="window.history.go(-1); return false;" />');
                     $invalidString ="<script type='text/javascript'>alert('The field {$stmt} must contain a string and cannot contain a character/symbol value.');</script>";
                     die($invalidString);
                 }
@@ -69,6 +72,7 @@
         $connection = mysqli_connect($databaseHost, $username, $password, $databaseName);
 
         if(mysqli_connect_errno()){
+            
             die("The connection to the database has failed due to: ". mysqli_connect_error());
         }
 

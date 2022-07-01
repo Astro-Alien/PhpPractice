@@ -1,0 +1,28 @@
+General Instruction:
+ 1.)Place the downloaded folder in you 'www' folder located in the wamp installation folder.
+ 
+Database Instructions:
+ 1.)Start the 'wamp'program  on your computer.
+ 2.)Search 'localhost' in your browser.
+ 3.)In localhost Select 'PhpMyAdmin 5.1.1' or your relevant version of it and log into your account.
+ 4.)In PhpMyAdmin create a new database called 'Person_db'.
+ 5.)Select 'Person_db'and then click on import.
+ 6.)Click on choose file and navigate to the 'Database Schema' folder in the downloaded project folder.
+ 7.)Select 'person_db.sql' and import the sql file to PhpMyAdmin and click on go.
+
+Test 1 Instructions:
+ 1.)Open the 'save.php' file found in the 'Test 1' folder.
+ 2.)Change the '$username' variable value to match the username of your PhpMyAdmin username.
+ 3.)Change the '$password' variable value to match the password of your PhpMyAdmin password.
+ 4.)Save the changes.
+ 5.)In your browser search localhost followed by the path to the 'Test 1' folder and open the 'index.html' file, e.g)'localhost/Proficiency-Test/Test 1/index.html'.
+ 6.)Enter valid data into the input fields and click on post to save the data to the database.
+
+Test 2 Instructions:
+ 1.)Open the 'saveToDB.php' file found in the 'Test 2' folder.
+ 2.)Change the '$username' variable value to match the username of your PhpMyAdmin username.
+ 3.)Change the '$password' variable value to match the password of your PhpMyAdmin password.
+ 4.)Save the changes.
+ 5.)In your browser search localhost followed by the path to the 'Test 2' folder and open the 'index.html' file, e.g)'localhost/Proficiency-Test/Test 2/index.html'.
+ 6.)Enter valid number into the input field and click on 'Generate' button to generate a CSV file which will be saved in the output folder.
+ 7.)To import a csv file return to the index.html page and select the 'Choose file' option and upload the csv file found in the 'output' folder then select import.

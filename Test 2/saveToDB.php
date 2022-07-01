@@ -56,7 +56,7 @@
                     $query = "INSERT into csv_import(Id,Name,Surname,Initial,Age,DateOfBirth) values('$item1','$item2','$item3','$item4','$item5','$item6')";
                     mysqli_query($connection, $query);
                 }
-                echo('<input action="action" type="button" value="Back" onclick="window.history.go(-1); return false;" />');
+                
                 fclose($handler);
                 echo "<script>alert('Import done');</script>";
             }
